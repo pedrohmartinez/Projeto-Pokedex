@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokédex</h1>
+            <p class="subtitle">Descubra todos os Pokémons</p>
+        </header>
+
+        <div class="search-section">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar por nome ou número..."
+                class="search-input"
+            >
+            <button id="searchBtn" class="search-btn">Buscar</button>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="pokemonCard" class="pokemon-card hidden">
+            <div class="card-header">
+                <img id="pokemonImage" src="" alt="Pokemon">
+            </div>
+
+            <div class="card-content">
+                <div class="pokemon-header">
+                    <div>
+                        <h2 id="pokemonName"></h2>
+                        <p id="pokemonId" class="pokemon-id"></p>
+                    </div>
+                    <div id="pokemonTypes" class="types"></div>
+                </div>
+
+                <div class="section">
+                    <h3>Stats Base</h3>
+                    <div id="statsContainer" class="stats-grid"></div>
+                </div>
+
+                <div class="section">
+                    <h3>Habilidades</h3>
+                    <div id="abilitiesContainer" class="abilities-list"></div>
+                </div>
+
+                <div class="section">
+                    <h3>Dimensões</h3>
+                    <div class="dimensions">
+                        <div class="dimension-item">
+                            <span>Altura:</span>
+                            <span id="height"></span>
+                        </div>
+                        <div class="dimension-item">
+                            <span>Peso:</span>
+                            <span id="weight"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prevBtn" class="nav-btn">← Anterior</button>
+                <span id="navigationInfo"></span>
+                <button id="nextBtn" class="nav-btn">Próximo →</button>
+            </div>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
